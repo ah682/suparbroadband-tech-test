@@ -1,0 +1,27 @@
+
+.how-it-works-section {
+    background: var(--bg-secondary);
+    padding: 100px 24px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Steps */
+@media (max-width: 1024px) {
+    .steps-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works-section {
+        padding: 60px 20px;
+    }
+}

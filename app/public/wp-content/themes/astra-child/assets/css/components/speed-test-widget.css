@@ -1,0 +1,282 @@
+
+.speed-test-widget {
+    background: var(--bg-secondary);
+    padding: 48px 24px;
+    border-radius: var(--radius-xl);
+    margin: 48px 0;
+}
+
+.speed-test-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-elevated);
+    padding: 48px 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+.speed-test-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.speed-test-header h3 {
+    margin: 0 0 12px 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.speed-test-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.speed-test-display {
+    margin-bottom: 32px;
+}
+
+.speed-meter {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.speedometer {
+    width: 240px;
+    height: 140px;
+    display: block;
+    margin: 0 auto;
+}
+
+#speed-arc {
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#needle {
+    transform-origin: 100px 100px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.speed-test-widget .speed-value {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+}
+
+#speed-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.speed-test-widget .speed-value .speed-unit {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.speed-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 28px 24px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.stat-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.speed-test-btn {
+    width: 100%;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: var(--text-inverse);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.speed-test-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+}
+
+.speed-test-btn:active {
+    transform: translateY(-1px);
+}
+
+.speed-test-btn:disabled {
+    background: var(--bg-secondary);
+    color: var(--text-tertiary);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.speed-test-btn.testing {
+    background: linear-gradient(135deg, var(--secondary-color), #00c853);
+}
+
+.btn-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.speed-test-result {
+    margin-top: 24px;
+    padding: 24px;
+    background: var(--success-bg);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--success-color);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-message {
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.result-message strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.upgrade-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+    font-size: 1rem;
+}
+
+.upgrade-link:hover {
+    color: var(--primary-hover);
+    gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speed-test-container {
+        padding: 40px 28px;
+    }
+
+    .speedometer {
+        width: 200px;
+        height: 120px;
+    }
+
+    #speed-number {
+        font-size: 2.5rem;
+    }
+
+    .speed-stats {
+        gap: 16px;
+        padding: 24px 20px;
+    }
+
+    .stat-value {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .speed-test-widget {
+        padding: 32px 16px;
+    }
+
+    .speed-test-container {
+        padding: 32px 20px;
+    }
+
+    .speed-test-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .speed-test-header p {
+        font-size: 1rem;
+    }
+
+    .speedometer {
+        width: 180px;
+        height: 110px;
+    }
+
+    #speed-number {
+        font-size: 2rem;
+    }
+
+    .speed-stats {
+        gap: 12px;
+        padding: 20px 16px;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .stat-value {
+        font-size: 1rem;
+    }
+
+    .speed-test-btn {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+}

@@ -1,0 +1,74 @@
+/* ===== LAYOUT STRUCTURE ===== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Main content should grow to fill space */
+#page {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-main,
+#main-content {
+    flex: 1 0 auto;
+}
+
+/* Ensure content wrapper exists */
+#content {
+    flex: 1 0 auto;
+}
+
+/* Footer stays at bottom */
+.site-footer {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+h1.entry-title {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.ast-single-post .entry-header .entry-title,
+.ast-page-builder-template .entry-title,
+.entry-content .entry-title {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/* Responsive Container */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    h1.entry-title,
+    .ast-single-post .entry-header .entry-title,
+    .ast-page-builder-template .entry-title,
+    .entry-content .entry-title {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    h1.entry-title,
+    .ast-single-post .entry-header .entry-title,
+    .ast-page-builder-template .entry-title,
+    .entry-content .entry-title {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+

@@ -1,0 +1,57 @@
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Backgrounds */
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --bg-elevated: #1e293b;
+        --bg-glass: rgba(30, 41, 59, 0.7);
+
+        /* Text Colors */
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-tertiary: #64748b;
+
+        /* Borders */
+        --border-color: #334155;
+        --border-color-strong: #475569;
+        --divider-color: rgba(255, 255, 255, 0.06);
+
+        /* Shadows (darker) */
+        --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        --shadow-sm: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+        --shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+        --shadow-lg: 0 10px 30px 0 rgba(0, 0, 0, 0.6);
+        --shadow-xl: 0 20px 50px 0 rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* Force light mode class */
+body.light-mode {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    /* ... light mode variables ... */
+}
+
+/* Force dark mode class */
+body.dark-mode {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    /* ... dark mode variables ... */
+}
+
+/* Dark Mode Adjustments for Footer */
+@media (prefers-color-scheme: dark) {
+    .footer-main {
+        border-bottom-color: var(--border-color);
+    }
+
+    .social-link {
+        background: var(--bg-primary);
+    }
+}

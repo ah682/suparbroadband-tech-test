@@ -1,0 +1,70 @@
+# WordPress Core
+app/public/wp-admin/
+app/public/wp-includes/
+app/public/wp-*.php
+app/public/xmlrpc.php
+app/public/wp-config-sample.php
+app/public/readme.html
+app/public/license.txt
+
+# WordPress Config
+app/public/wp-config.php
+app/public/.htaccess
+
+# Uploads and Cache
+app/public/wp-content/uploads/
+app/public/wp-content/cache/
+app/public/wp-content/upgrade/
+app/public/wp-content/backup-db/
+app/public/wp-content/backups/
+
+# Default WordPress Themes (keep only custom themes)
+app/public/wp-content/themes/twentytwenty*/
+
+# All Plugins (we'll track only if needed)
+app/public/wp-content/plugins/
+
+# Local Server Files
+logs/
+conf/
+
+# Database
+*.sql
+*.sql.gz
+
+# Environment & Local
+.env
+.env.local
+local-*
+.DS_Store
+Thumbs.db
+
+# Node modules (if using any build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build files
+*.map
+*.min.css.map
+*.min.js.map
+
+# Backup files
+*.backup
+*-old.*
+*.bak
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*~
+
+# Keep these important files
+!.gitignore
+!README.md

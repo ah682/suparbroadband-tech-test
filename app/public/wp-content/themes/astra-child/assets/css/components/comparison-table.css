@@ -1,0 +1,294 @@
+
+.comparison-widget {
+    margin: 48px 0;
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    background: var(--bg-elevated);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-elevated);
+    min-width: 800px;
+    table-layout: fixed;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+
+.comparison-table thead th {
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: var(--text-inverse);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    padding: 24px 16px;
+}
+
+.comparison-table .feature-column {
+    background: var(--bg-secondary);
+    text-align: left;
+    font-weight: 700;
+    width: 180px;
+    min-width: 180px;
+    font-size: 0.9375rem;
+    padding-left: 20px;
+}
+
+.comparison-table .plan-column {
+    width: auto;
+    min-width: 200px;
+}
+
+.plan-header {
+    text-align: center;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.plan-header img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+    border-radius: var(--radius-sm);
+}
+
+.plan-header h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.plan-header .plan-name {
+    margin: 0;
+    font-size: 0.875rem;
+    opacity: 0.85;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+.comparison-table .feature-label {
+    background: var(--bg-secondary);
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+}
+
+.comparison-table .plan-value {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 16px 12px;
+    overflow: hidden;
+}
+
+.comparison-table .highlight-row {
+    background: var(--info-bg);
+}
+
+.comparison-table .highlight-row .plan-value {
+    font-weight: 700;
+    padding: 24px 12px;
+}
+
+.comparison-table .speed-container {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.comparison-table .speed-value {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.comparison-table .speed-unit {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.comparison-table .price-value {
+    color: var(--secondary-color);
+    font-size: 1.75rem;
+    font-weight: 800;
+    display: block;
+    line-height: 1;
+}
+
+.comparison-table .price-period {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    display: block;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.comparison-table .free-badge {
+    background: var(--secondary-color);
+    color: var(--text-inverse);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+.comparison-table .total-row {
+    background: var(--warning-bg);
+    border-top: 3px solid var(--primary-color);
+}
+
+.comparison-table .total-row td {
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 20px 16px;
+}
+
+.comparison-table .cta-row {
+    background: var(--bg-elevated);
+}
+
+.comparison-table .cta-row td {
+    padding: 24px 16px;
+}
+
+.comparison-table .comparison-cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: var(--text-inverse);
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    max-width: 180px;
+}
+
+.comparison-table .comparison-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--text-inverse);
+}
+
+/* Mobile Comparison Table */
+@media (max-width: 768px) {
+    .comparison-widget {
+        margin: 32px -16px;
+    }
+
+    .comparison-table-wrapper {
+        border-radius: 0;
+    }
+
+    .comparison-table {
+        font-size: 0.875rem;
+        min-width: 700px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 14px 10px;
+    }
+
+    .comparison-table .feature-column {
+        width: 140px;
+        min-width: 140px;
+        font-size: 0.875rem;
+        padding-left: 12px;
+    }
+
+    .comparison-table .plan-column {
+        min-width: 160px;
+    }
+
+    .comparison-table .speed-value {
+        font-size: 1.5rem;
+    }
+
+    .comparison-table .price-value {
+        font-size: 1.5rem;
+    }
+
+    .plan-header img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .plan-header h3 {
+        font-size: 1rem;
+    }
+
+    .plan-header .plan-name {
+        font-size: 0.8125rem;
+    }
+
+    .comparison-table .comparison-cta-btn {
+        padding: 12px 24px;
+        font-size: 0.9375rem;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comparison-table {
+        min-width: 600px;
+    }
+
+    .comparison-table .feature-column {
+        width: 120px;
+        min-width: 120px;
+        font-size: 0.8125rem;
+    }
+
+    .comparison-table .plan-column {
+        min-width: 140px;
+    }
+
+    .comparison-table .speed-value,
+    .comparison-table .price-value {
+        font-size: 1.25rem;
+    }
+
+    .plan-header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .plan-header h3 {
+        font-size: 0.9375rem;
+    }
+}

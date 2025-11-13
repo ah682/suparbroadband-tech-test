@@ -1,0 +1,12 @@
+
+.speed-test-section {
+    background: var(--bg-secondary);
+    padding: 100px 24px;
+}
+
+/* Responsive Speed Test */
+@media (max-width: 768px) {
+    .speed-test-section {
+        padding: 60px 20px;
+    }
+}

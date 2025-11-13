@@ -1,0 +1,363 @@
+.how-to-get-started-page {
+    background: var(--background-primary);
+    padding-bottom: 80px;
+}
+
+/* Steps Section */
+.steps-section {
+    padding: 60px 24px;
+    background: var(--background-primary);
+}
+
+.steps-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.step-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.12);
+    border-color: var(--primary-gradient-start);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: var(--text-inverse);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.step-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.step-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-gradient-start);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9375rem;
+}
+
+.step-link:hover {
+    color: var(--primary-gradient-end);
+    transform: translateX(4px);
+}
+
+/* Speed Guide Section */
+.speed-guide-section {
+    padding: 80px 24px;
+    background: var(--background-secondary);
+}
+
+.speed-guide-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-header h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-header.text-center {
+    text-align: center;
+}
+
+.speed-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.speed-guide-card {
+    background: var(--card-background);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.speed-guide-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 102, 255, 0.15);
+    border-color: var(--primary-gradient-start);
+}
+
+.speed-guide-card.featured {
+    border-color: var(--primary-gradient-start);
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.03), rgba(0, 204, 255, 0.03));
+    transform: scale(1.05);
+}
+
+.speed-guide-card.featured:hover {
+    transform: scale(1.08) translateY(-6px);
+}
+
+.speed-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: var(--text-inverse);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+.speed-guide-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.speed-guide-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.speed-guide-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.speed-guide-card ul li {
+    padding: 8px 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 28px;
+    line-height: 1.6;
+}
+
+.speed-guide-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-gradient-start);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: linear-gradient(135deg, #ff6b00, #ff9500);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.4);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 24px;
+    background: var(--background-primary);
+}
+
+.faq-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.1);
+    border-color: var(--primary-gradient-start);
+}
+
+.faq-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 24px;
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cta-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.cta-section h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--text-inverse);
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    opacity: 0.95;
+    color: var(--text-inverse);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .speed-guide-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .speed-guide-card.featured {
+        transform: scale(1.02);
+    }
+
+    .speed-guide-card.featured:hover {
+        transform: scale(1.04) translateY(-6px);
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-section,
+    .speed-guide-section,
+    .faq-section,
+    .cta-section {
+        padding: 50px 20px;
+    }
+
+    .steps-grid,
+    .speed-guide-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .speed-guide-card.featured {
+        transform: scale(1);
+    }
+
+    .speed-guide-card.featured:hover {
+        transform: translateY(-6px);
+    }
+
+    .step-card {
+        padding: 24px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

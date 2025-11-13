@@ -1,0 +1,87 @@
+
+.powered-by-section {
+    background: var(--bg-secondary);
+    padding: 48px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.powered-text {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-bottom: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.provider-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.provider-badge {
+    background: var(--bg-elevated);
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    font-size: 0.9375rem;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.provider-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Provider Logo Images */
+.provider-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+    min-width: 120px;
+    height: 80px;
+}
+
+.provider-logo-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.provider-logo-img {
+    max-width: 100px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(30%) opacity(85%);
+    transition: filter var(--transition-base);
+}
+
+.provider-logo-item:hover .provider-logo-img {
+    filter: grayscale(0%) opacity(100%);
+}
+
+/* Responsive Provider Logos */
+@media (max-width: 768px) {
+    .provider-logo-item {
+        min-width: 100px;
+        height: 70px;
+    }
+
+    .provider-logo-img {
+        max-width: 80px;
+        max-height: 40px;
+    }
+}
